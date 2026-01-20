@@ -2,39 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hall Ticket</title>
 </head>
+
 <body>
 
-    <!-- Heading and formatting -->
-    <h1 align="center"><u>Examination Hall Ticket</u></h1>
-    <p><b>Important:</b> <i>Bring this hall ticket to the examination hall.</i></p>
+    <!-- Title -->
+    <h1 align="center"><u>EXAMINATION HALL TICKET</u></h1>
+    <hr>
 
-    <!-- Image -->
-    <center>
-        <img src="download.jfif" alt="Student Photo">
-    </center>
+    <!-- Important Note -->
+    <p>
+        <b>Important:</b>
+        <i>This hall ticket must be carried to the examination hall.</i>
+    </p>
 
-    <!-- Student Details Table -->
-    <h2>Student Details</h2>
-    <table border="1" width="100%">
+    <!-- Student Details -->
+    <table border="1" width="100%" cellpadding="8" cellspacing="0">
         <tr>
-            <th>Name</th>
-            <th>Roll No</th>
-            <th>Course</th>
-            <th>Semester</th>
-        </tr>
-        <tr>
-            <td>Sahil kadu</td>
-            <td>IT1023</td>
-            <td>BTech I.T.</td>
-            <td>IV</td>
+            <td width="80%">
+                <table border="0" width="100%">
+                    <tr>
+                        <td><b>Name</b></td>
+                        <td>: Sahil Kadu</td>
+                    </tr>
+                    <tr>
+                        <td><b>Roll No</b></td>
+                        <td>: IT1023</td>
+                    </tr>
+                    <tr>
+                        <td><b>Course</b></td>
+                        <td>: B.Tech (I.T.)</td>
+                    </tr>
+                    <tr>
+                        <td><b>Semester</b></td>
+                        <td>: IV</td>
+                    </tr>
+                </table>
+            </td>
+
+            <!-- Photo -->
+            <td align="center">
+                <img src="download.jfif" alt="Student Photo" width="120" height="150">
+                <br>
+                <small>Student Photo</small>
+            </td>
         </tr>
     </table>
 
-    <!-- Subject List -->
-    <h2>Subjects</h2>
+    <!-- Subjects -->
+    <h3>Subjects</h3>
     <ul>
         <li>Data Structures</li>
         <li>Operating Systems</li>
@@ -46,8 +63,8 @@
     </ul>
 
     <!-- Exam Schedule -->
-    <h2>Exam Schedule</h2>
-    <table border="1" width="100%">
+    <h3>Examination Schedule</h3>
+    <table border="1" width="100%" cellpadding="8" cellspacing="0">
         <tr>
             <th>Subject</th>
             <th>Date</th>
@@ -80,8 +97,12 @@
         </tr>
     </table>
 
-    <!-- Form -->
-    <h2>Student Declaration</h2>
+    <!-- Declaration -->
+    <h3>Student Declaration</h3>
+    <p>
+        I hereby declare that I will follow all the examination rules and regulations.
+    </p>
+
     <form>
         Name: <input type="text"><br><br>
         Roll No: <input type="text"><br><br>
@@ -89,20 +110,34 @@
         <input type="submit" value="Submit">
     </form>
 
-    <!-- Multimedia -->
-    <h2>Instructions Audio</h2>
+    <!-- Signatures -->
+    <br><br>
+    <table width="100%">
+        <tr>
+            <td align="center">
+                _______________________<br>
+                Student Signature
+            </td>
+            <td align="center">
+                _______________________<br>
+                Controller of Examination
+            </td>
+        </tr>
+    </table>
+
+    <!-- Instructions Audio -->
+    <h3>Instructions (Audio)</h3>
     <audio controls>
         <source src="narendra_modi.mp3" type="audio/mpeg">
+        Your browser does not support audio.
     </audio>
 
-    <h2>Instructions Video</h2>
+    <!-- Instructions Video -->
+    <h3>Instructions (Video)</h3>
     <video width="300" controls>
         <source src="12232716_2160_3840_60fps.mp4" type="video/mp4">
+        Your browser does not support video.
     </video>
-
-    <!-- Iframe -->
-    <h2>University Website</h2>
-    <iframe src="https://www.example.com" width="100%" height="200"></iframe>
 
 </body>
 </html>
