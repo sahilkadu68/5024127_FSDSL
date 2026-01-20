@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Frames Example in One File</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        iframe {
+            width: 48%;
+            height: 300px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Frames Demonstration</h1>
+    <p>This example shows two frames created using iframes in a single HTML file.</p>
+
+    <hr>
+
+    <!-- Frame 1 -->
+    <iframe srcdoc="
+        <html>
+        <body>
+            <h2>Frame One</h2>
+            <p>This is the first frame.</p>
+            <p>It contains basic HTML content.</p>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </body>
+        </html>
+    ">
+    </iframe>
+
+    <!-- Frame 2 -->
+    <iframe srcdoc="
+        <html>
+        <body>
+            <h2>Frame Two</h2>
+            <p>This is the second frame.</p>
+            <p>Each frame works independently.</p>
+            <ol>
+                <li>Easy to understand</li>
+                <li>Simple layout</li>
+                <li>Beginner friendly</li>
+            </ol>
+        </body>
+        </html>
+    ">
+    </iframe>
+
+</body>
+</html>
