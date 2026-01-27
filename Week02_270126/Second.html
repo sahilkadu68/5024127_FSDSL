@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hall Ticket</title>
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e9ecf1;
+        }
+
+        .ticket {
+            width: 800px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            border: 2px solid #000;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 0;
+            color: #000;
+        }
+
+        hr {
+            border: 1px solid #000;
+            margin: 10px 0 20px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        table, th, td {
+            border: 1px solid #000;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        .photo {
+            text-align: center;
+        }
+
+        .photo img {
+            border: 1px solid #000;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        form {
+            margin-top: 10px;
+        }
+
+        input[type="text"] {
+            width: 200px;
+        }
+
+        .signatures {
+            margin-top: 40px;
+        }
+
+        .signatures td {
+            border: none;
+            text-align: center;
+        }
+
+        audio, video {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="ticket">
+
+    <h1><u>EXAMINATION HALL TICKET</u></h1>
+    <hr>
+
+    <p>
+        <b>Important:</b>
+        <i>This hall ticket must be carried to the examination hall.</i>
+    </p>
+
+    <!-- Student Details -->
+    <table>
+        <tr>
+            <td width="75%">
+                <table style="border: none;">
+                    <tr>
+                        <td style="border: none;"><b>Name</b></td>
+                        <td style="border: none;">: Sahil Kadu</td>
+                    </tr>
+                    <tr>
+                        <td style="border: none;"><b>Roll No</b></td>
+                        <td style="border: none;">: IT1023</td>
+                    </tr>
+                    <tr>
+                        <td style="border: none;"><b>Course</b></td>
+                        <td style="border: none;">: B.Tech (I.T.)</td>
+                    </tr>
+                    <tr>
+                        <td style="border: none;"><b>Semester</b></td>
+                        <td style="border: none;">: IV</td>
+                    </tr>
+                </table>
+            </td>
+
+            <td class="photo">
+                <img src="download.jfif" width="120" height="150"><br>
+                <small>Student Photo</small>
+            </td>
+        </tr>
+    </table>
+
+    <h3>Subjects</h3>
+    <ul>
+        <li>Data Structures</li>
+        <li>Operating Systems</li>
+        <li>DBMS</li>
+        <li>Web Technologies</li>
+        <li>Computer Networks</li>
+        <li>Algorithms</li>
+        <li>Software Engineering</li>
+    </ul>
+
+    <h3>Examination Schedule</h3>
+    <table>
+        <tr>
+            <th>Subject</th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>
+        <tr>
+            <td>Data Structures</td>
+            <td>10-03-2026</td>
+            <td>9:00 AM - 12:00 PM</td>
+        </tr>
+        <tr>
+            <td>Web Technologies</td>
+            <td>15-03-2026</td>
+            <td>9:00 AM - 12:00 PM</td>
+        </tr>
+        <tr>
+            <td>Computer Networks</td>
+            <td>20-03-2026</td>
+            <td>9:00 AM - 12:00 PM</td>
+        </tr>
+        <tr>
+            <td>Algorithms</td>
+            <td>25-03-2026</td>
+            <td>9:00 AM - 12:00 PM</td>
+        </tr>
+        <tr>
+            <td>Software Engineering</td>
+            <td>30-03-2026</td>
+            <td>9:00 AM - 12:00 PM</td>
+        </tr>
+    </table>
+
+    <h3>Student Declaration</h3>
+    <p>
+        I hereby declare that I will follow all the examination rules and regulations.
+    </p>
+
+    <form>
+        Name: <input type="text"><br><br>
+        Roll No: <input type="text"><br><br>
+        <input type="checkbox"> I agree to the rules
+    </form>
+
+    <table class="signatures" width="100%">
+        <tr>
+            <td>
+                _______________________<br>
+                Student Signature
+            </td>
+            <td>
+                _______________________<br>
+                Controller of Examination
+            </td>
+        </tr>
+    </table>
+
+    <h3>Instructions (Audio)</h3>
+    <audio controls>
+        <source src="narendra_modi.mp3" type="audio/mpeg">
+    </audio>
+
+    <h3>Instructions (Video)</h3>
+    <video width="300" controls>
+        <source src="12232716_2160_3840_60fps.mp4" type="video/mp4">
+    </video>
+
+</div>
+
+</body>
+</html>
