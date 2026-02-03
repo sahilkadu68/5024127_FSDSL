@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Sahil Kadu</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav">
+  <div class="container">
+    <a class="navbar-brand fw-bold letter-space" href="index.html">SAHIL KADU</a>
+    <ul class="navbar-nav ms-auto gap-3">
+      <li><a class="nav-link" href="index.html">Home</a></li>
+      <li><a class="nav-link" href="about.html">About</a></li>
+      <li><a class="nav-link" href="projects.html">Projects</a></li>
+      <li><a class="nav-link active" href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero-advanced d-flex align-items-center inner-hero">
+  <div class="container text-center text-white">
+    <h1 class="display-4 fw-bold">Contact</h1>
+    <p class="lead opacity-75">Let’s work together</p>
+  </div>
+</section>
+
+<section class="py-3 bg-light">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active">Contact</li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 glass-form">
+        <form onsubmit="sendMessage(event)">
+          <input class="form-control mb-3" placeholder="Name" required>
+          <input class="form-control mb-3" type="email" placeholder="Email" required>
+          <textarea class="form-control mb-3" rows="4" placeholder="Message" required></textarea>
+          <button class="btn btn-primary w-100">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="text-center py-4 footer-dark">
+  © 2026 Sahil Kadu
+</footer>
+
+<script>
+  function sendMessage(e) {
+    e.preventDefault();
+    alert("Message sent successfully!");
+    e.target.reset();
+  }
+</script>
+
+</body>
+</html>

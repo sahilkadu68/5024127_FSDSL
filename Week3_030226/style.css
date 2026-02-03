@@ -1,0 +1,100 @@
+:root {
+  --primary: #0d6efd;
+  --dark: #0b0f19;
+  --glass: rgba(255,255,255,0.15);
+}
+
+body {
+  padding-top: 75px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #fff;
+}
+
+.letter-space {
+  letter-spacing: 2px;
+}
+
+.glass-nav {
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(12px);
+}
+
+.hero-advanced {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, #7a7583, transparent 40%),
+    radial-gradient(circle at bottom right, #1f8ece, transparent 40%),
+    var(--dark);
+}
+
+.pill {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 50px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+}
+
+.glass-card {
+  padding: 35px;
+  border-radius: 18px;
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  transition: transform .3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+}
+
+.page-section {
+  padding: 100px 0;
+}
+
+.bg-soft {
+  background: #f6f7fb;
+}
+
+.skill-grid span {
+  display: inline-block;
+  margin: 8px;
+  padding: 10px 18px;
+  border-radius: 50px;
+  background: #f1f3f6;
+  font-size: 0.9rem;
+}
+
+.project-advanced {
+  height: 100%;
+  padding: 30px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  transition: all .3s ease;
+}
+
+.project-advanced:hover {
+  transform: translateY(-10px);
+}
+
+.project-advanced .tags span {
+  display: inline-block;
+  margin: 6px 6px 0 0;
+  padding: 6px 14px;
+  border-radius: 30px;
+  background: #eef1f5;
+  font-size: 0.8rem;
+}
+
+.glass-form {
+  padding: 35px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.footer-dark {
+  background: #0b0f19;
+  color: #aaa;
+}
