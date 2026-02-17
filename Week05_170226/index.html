@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Event Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Smart Event Registration</h2>
+
+    <input type="text" id="name" placeholder="Full Name">
+    <input type="text" id="email" placeholder="Email Address">
+    <input type="date" id="date">
+
+    <button onclick="registerUser()">Register</button>
+
+    <p id="message"></p>
+
+    <div class="summary">
+        Total Registrations: <span id="count">0</span>
+    </div>
+
+    <h3>Registered Users</h3>
+    <div id="userList"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
