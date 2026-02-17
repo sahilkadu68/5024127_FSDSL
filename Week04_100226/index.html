@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Expense Tracker & Budget Analyzer</h2>
+    <input type="text" id="title" placeholder="Expense title">
+    <input type="number" id="amount" placeholder="Amount">
+    <select id="category">
+        <option value="">Select category</option>
+        <option>Food</option>
+        <option>Travel</option>
+        <option>Study</option>
+        <option>Entertainment</option>
+    </select>
+    <button onclick="addExpense()">Add Expense</button>
+    <div class="summary">
+        <p>Total Expense: ₹<span id="total">0</span></p>
+    </div>
+    <div id="list"></div>
+</div>
+<script>
+    // Class
+    class Expense {
+        constructor(title, amount, category) {
+            this.title = title;
+            this.amount = amount;
+            this.category = category;
+        }
+    }
+    let expenses = [];
+    function addExpense() {
+        let title = document.getElementById("title").value;
+        let amount = Number(document.getElementById("amount").value);
+        let category = document.getElementById("category").value;
+        if (title === "" || amount <= 0 || category === "") {
+            alert("Please fill all fields correctly");
+            return;
+        }
+        let expense = new Expense(title, amount, category);
+        expenses.push(expense);
+        displayExpenses();
+        calculateTotal();
+        document.getElementById("title").value = "";
+        document.getElementById("amount").value = "";
+        document.getElementById("category").value = "";
+    }
+    function displayExpenses() {
+        let list = document.getElementById("list");
+        list.innerHTML = "";
+
+        for (let i = 0; i < expenses.length; i++) {
+            list.innerHTML += `
+                <div class="item">
+                    <span>${expenses[i].title} (${expenses[i].category})</span>
+                    <strong>₹${expenses[i].amount}</strong>
+                </div>
+            `;
+        }
+    }
+    function calculateTotal() {
+        let total = 0;
+
+        for (let i = 0; i < expenses.length; i++) {
+            total += expenses[i].amount;
+        }
+
+        document.getElementById("total").innerText = total;
+    }
+</script>
+</body>
+</html>
