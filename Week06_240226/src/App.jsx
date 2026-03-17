@@ -10,7 +10,6 @@ function App() {
     setIssues(prev => [...prev, issue]);
   }
 
-  // ✅ RETURN MUST BE INSIDE FUNCTION
   return (
     <div className="container">
       <header>
