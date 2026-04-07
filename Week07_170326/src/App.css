@@ -1,0 +1,76 @@
+.container{
+  text-align:center;
+  margin-top:80px;
+}
+
+input{
+  display:block;
+  margin:10px auto;
+  padding:8px;
+  width:220px;
+}
+
+button{
+  padding:8px 15px;
+  cursor:pointer;
+}
+
+.result{
+  margin-top:20px;
+}
+
+.warning{
+  color:red;
+}
+
+.good{
+  color:green;
+}.container{
+  max-width:600px;
+  margin:auto;
+  padding:20px;
+  text-align:center;
+}
+
+h1{
+  margin-bottom:20px;
+}
+
+.form{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+input, textarea, select{
+  padding:10px;
+  border:1px solid #ccc;
+  border-radius:5px;
+}
+
+button{
+  padding:10px;
+  background:#4CAF50;
+  color:white;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#45a049;
+}
+
+.card{
+  background:white;
+  padding:15px;
+  border-radius:8px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom:10px;
+  text-align:left;
+}
+
+.feedback-list{
+  margin-top:20px;
+}
