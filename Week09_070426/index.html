@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="contactApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Contact Manager</title>
+
+    <!-- AngularJS CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 420px;
+            margin: 50px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        input {
+            width: 95%;
+            padding: 10px;
+            margin: 6px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #667eea;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #5a67d8;
+        }
+
+        hr {
+            margin: 15px 0;
+        }
+
+        .card {
+            background: #f8f9fa;
+            margin: 8px 0;
+            padding: 12px;
+            border-radius: 8px;
+            transition: 0.2s;
+            border-left: 5px solid #667eea;
+            text-align: left;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+            background: #eef1ff;
+        }
+
+        .card strong {
+            color: #333;
+        }
+
+        .delete-btn {
+            float: right;
+            background: crimson;
+            border: none;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .delete-btn:hover {
+            background: darkred;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 10px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body ng-controller="contactController">
+
+<div class="container">
+    <h2>📒 Smart Contact Manager</h2>
+
+    <!-- Add Contact -->
+    <input type="text" ng-model="newName" placeholder="Enter Name">
+    <input type="text" ng-model="newPhone" placeholder="Enter Phone">
+
+    <button ng-click="addContact()">Add Contact ➕</button>
+
+    <hr>
+
+    <!-- Search -->
+    <input type="text" ng-model="searchText" placeholder="🔍 Search contacts">
+
+    <!-- Contact List -->
+    <div class="card" ng-repeat="c in contacts | filter:searchText track by $index">
+        <button class="delete-btn" ng-click="deleteContact($index)">X</button>
+        <strong>{{ c.name }}</strong><br>
+        📞 {{ c.phone }}
+    </div>
+
+    <!-- Expression -->
+    <p>Total Contacts: {{ contacts.length }}</p>
+</div>
+
+<script>
+    var app = angular.module("contactApp", []);
+
+    app.controller("contactController", function($scope) {
+
+        // Initial contacts
+        $scope.contacts = [
+            { name: "Sahil", phone: "9876543210" },
+            { name: "Rahul", phone: "9123456780" }
+        ];
+
+        // Add contact
+        $scope.addContact = function() {
+            if ($scope.newName && $scope.newPhone) {
+                $scope.contacts.push({
+                    name: $scope.newName,
+                    phone: $scope.newPhone
+                });
+
+                $scope.newName = "";
+                $scope.newPhone = "";
+            }
+        };
+
+        // Delete contact
+        $scope.deleteContact = function(index) {
+            $scope.contacts.splice(index, 1);
+        };
+    });
+</script>
+
+</body>
+</html>
